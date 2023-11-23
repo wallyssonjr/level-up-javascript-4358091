@@ -31,3 +31,17 @@ class Book {
 }
 
 // Write your code here
+class TecnicalBook extends Book{
+  constructor(title,author,numCopies, edition){
+    super(title,author,numCopies);
+    this.edition = edition;
+  }
+
+  getEdition(){
+    return `The current version of this book is ${this.edition}`;
+  }
+}
+
+const CrackinTheCodingInterview = new TecnicalBook("Cracking the Coding Interview","teste",1120,12);
+console.log(CrackinTheCodingInterview.availability);
+console.log(CrackinTheCodingInterview.getEdition());
